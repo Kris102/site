@@ -29,6 +29,21 @@ body {
     gap: 20px; /* Space between items */
 }
 
+.link-item a {
+    display: block;
+    padding: 10px;
+    background-color: #D4D4D8; /* Light grey typical of XP themes */
+    border: 1px solid #FFF;
+    box-shadow: inset -1px -1px 0 0 #0A246A, inset 1px 1px 0 0 #BFCBFD, 1px 1px 0 0 #000;
+    border-radius: 3px; /* Optional: gives a slight rounded edge like old XP icons */
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color */
+}
+
+.link-item p {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .link-item {
     text-align: center; /* Aligns text and images within each link item */
     width: 120px; /* Set a fixed width for each item */
