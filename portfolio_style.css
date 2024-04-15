@@ -8,7 +8,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 2em; /* Adjust size as needed */
+    font-size: 2em;
     margin-top: 20px;
     font-weight: 700;
 }
@@ -21,7 +21,7 @@ h1 {
 }
 
 .item img {
-    width: 100%; /* Make images responsive */
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -31,30 +31,44 @@ h1 {
     margin-top: 10px;
 }
 
-/* Enhancements for aesthetics */
 .item {
-    background: #333; /* Dark grey background for items */
+    background: #333;
     padding: 10px;
     border-radius: 5px;
 }
 
 .popup {
     position: fixed;
-    width: 50%;  /* Adjust width as needed */
-    height: auto;
+    width: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-color: #ececec; /* Light gray like XP theme */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-    padding: 20px; /* Adds some padding around the image */
-    border-radius: 10px; /* Optional: Rounds the corners of the popup */
+    z-index: 1000;
+    border: 3px solid #000; /* Black border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    border-radius: 5px;
+    padding: 20px;
 }
 
 .popup-image {
-    width: 100%; /* Adjust the image to fit within the popup */
-    cursor: pointer; /* Indicates the image can be clicked */
+    width: 90%; /* Slightly smaller than the popup for aesthetics */
+    cursor: pointer;
+}
+
+/* Optional: Simulated Window Control Buttons */
+.popup:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff5b5b; /* Red close button */
+    border-radius: 50%;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
 }
