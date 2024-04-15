@@ -4,9 +4,10 @@
 }
 
 h1 {
-    font-family: 'Roboto Mono', monospace; /* Robotic-looking font */
+    font-family: 'Roboto Mono', monospace;
     font-size: 24px;
     color: #000;
+    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
 }
 
 .space-bg {
@@ -15,9 +16,9 @@ h1 {
 }
 
 body {
-    font-family: Arial, sans-serif; /* Add the font style for consistency */
+    font-family: Arial, sans-serif;
     background: transparent;
-    text-align: center; /* Aligns all content to the center */
+    text-align: center;
     padding: 20px;
     margin: 0;
 }
@@ -26,36 +27,39 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between items */
+    gap: 20px;
 }
 
 .link-item a {
     display: block;
     padding: 10px;
-    background-color: #D4D4D8; /* Light grey typical of XP themes */
+    background-color: #D4D4D8;
     border: 1px solid #FFF;
     box-shadow: inset -1px -1px 0 0 #0A246A, inset 1px 1px 0 0 #BFCBFD, 1px 1px 0 0 #000;
-    border-radius: 3px; /* Optional: gives a slight rounded edge like old XP icons */
-    text-decoration: none; /* Removes underline from links */
-    color: black; /* Text color */
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-item a:hover {
+    background-color: #E4E4F7; /* Lighter grey to simulate button press */
+    box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
 }
 
 .link-item p {
     font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    color: #333;
+    text-shadow: 1px 1px 0px #fff; /* Additional styling for text shadow */
 }
 
 .link-item {
-    text-align: center; /* Aligns text and images within each link item */
-    width: 120px; /* Set a fixed width for each item */
+    text-align: center;
+    width: 120px;
 }
 
 .link-item img {
-    width: 100%; /* Makes the image fill the container */
+    width: 100%;
     height: auto;
 }
 
-.link-item p {
-    margin-top: 8px; /* Space between image and text */
-    font-size: 14px;
-    color: #333;
-}
