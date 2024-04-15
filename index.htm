@@ -6,24 +6,23 @@
     <link rel="stylesheet" href="index_style.css">
     <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
 </head>
-    
-
 <body>
     <div class="taskbar">
-    <div class="start-menu-icon">
-        <img src="http://img1.wikia.nocookie.net/__cb20070916085445/windows/images/c/c7/Start_button_(Windows_XP).png" alt="Start Menu">
+        <div class="start-menu-icon">
+            <img src="http://img1.wikia.nocookie.net/__cb20070916085445/windows/images/c/c7/Start_button_(Windows_XP).png" alt="Start Menu">
+        </div>
+        <div class="taskbar-items">
+            <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" class="taskbar-icon">
+            <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Portfolio" class="taskbar-icon">
+            <!-- Add other icons similarly -->
+        </div>
+        <div class="clock">12:00 PM</div>
     </div>
-    <div class="taskbar-items">
-        <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" class="taskbar-icon">
-        <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Portfolio" class="taskbar-icon">
-        <!-- Add other icons similarly -->
-    </div>
-    <div class="clock">12:00 PM</div>
-</div>
     <center>
         <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" width="290" height="117">
     </center>
     <div class="social-links">
+        <!-- Social links and items -->
         <div class="link-item">
             <a href="portfolio.html">
                 <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Graphic Design Portfolio">
@@ -35,14 +34,12 @@
                 <img src="https://i.ibb.co/z7YDck2/580b57fcd9996e24bc43c521.png" alt="Instagram">
                 <p>Instagram.exe</p>
             </a>
-</div>
-        
-            <div class="link-item">
-    <a href="https://marksnihongoguide.super.site/">
-        <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713191833/wwxrrsszsq4ndzud0j15.png" alt="Nihongo Guide">
-        <p>Nihongo Guide.exe</p>
-    </a>
-
+        </div>
+        <div class="link-item">
+            <a href="https://marksnihongoguide.super.site/">
+                <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713191833/wwxrrsszsq4ndzud0j15.png" alt="Nihongo Guide">
+                <p>Nihongo Guide.exe</p>
+            </a>
         </div>
         <div class="link-item">
             <a href="https://soundcloud.com/user-808808879">
@@ -60,53 +57,9 @@
             <a href="https://discord.gg/EuwyNRdQY2">
                 <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="Discord">
                 <p>Discord.exe</p>
-            </a>
+            </a
         </div>
         <div class="link-item">
             <a href="Summoning_Yoda.html">
-                <img src="https://i.ibb.co/W0G1HJF/FUK.png" alt="Summon Yoda">
-                <p>Summon Yoda.exe</p>
-            </a>
-        </div>
-    </div>
-    <div>
-        <h1>僕はクリスです</h1>
-    </div>
-    <script>
-document.querySelector('.start-menu-icon').addEventListener('click', function() {
-    var menu = document.querySelector('.start-menu');
-    menu.classList.toggle('hidden');
-});
-</script>
-<div class="desktop-icons">
-    <!-- Your links formatted as desktop icons here -->
-</div>
-<script>
-function updateClock() {
-    var now = new Date(); // Current date and time
-    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // Hour '0' should be '12'
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
-    document.querySelector('.clock').innerText = strTime;
-    setTimeout(updateClock, 1000); // Update time every second
-}
-updateClock();
-</script>
+                <img
 
-</body>
-    <div class="start-menu hidden">
-    <ul>
-        <li><a href="portfolio.html">Portfolio.exe</a></li>
-        <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
-        <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
-        <li><a href="#">My Computer</a></li>
-        <!-- Add other links here -->
-    </ul>
-</div>
-
-</html>
