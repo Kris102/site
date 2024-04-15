@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kris102 Graphic Design Portfolio</title>
+    <link rel="stylesheet" href="portfolio_style.css">
+</head>
+<body>
+    <h1>Graphic Design Portfolio</h1>
+    <div class="gallery">
+        <!-- Example of a portfolio item -->
+        <div class="item">
+            <img src="https://example.com/path/to/image.jpg" alt="Project Image" width="300">
+            <p>Description of the project.</p>
+        </div>
+        <!-- Repeat the above block for each portfolio item -->
+    </div>
+</body>
+</html>
