@@ -3,24 +3,23 @@
     background-repeat: repeat;
 }
 
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 24px;
-    color: #000;
-    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
-}
-
 .space-bg {
     background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
     background-repeat: repeat;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace; /* Uniform font family */
     background: transparent;
     text-align: center;
     padding: 20px;
     margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #000;
+    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
 }
 
 .social-links {
@@ -28,6 +27,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+.link-item {
+    text-align: center;
+    width: 120px;
 }
 
 .link-item a {
@@ -46,20 +50,34 @@ body {
     box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
 }
 
+.link-item img {
+    width: 100%;
+    height: auto;
+}
+
 .link-item p {
-    font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: #333;
     text-shadow: 1px 1px 0px #fff; /* Additional styling for text shadow */
 }
 
-.link-item {
-    text-align: center;
-    width: 120px;
-}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.link-item img {
-    width: 100%;
-    height: auto;
+    .link-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    h1 {
+        font-size: 18px; /* Smaller font size on mobile */
+    }
+
+    .link-item a {
+        padding: 8px;
+    }
 }
 
