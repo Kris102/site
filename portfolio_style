@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em; /* Adjust size as needed */
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.item img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    display: block;
+}
+
+.item p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Enhancements for aesthetics */
+.item {
+    background: #333; /* Dark grey background for items */
+    padding: 10px;
+    border-radius: 5px;
+}
