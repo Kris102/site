@@ -3,6 +3,12 @@
     background-repeat: repeat;
 }
 
+h1 {
+    font-family: 'Roboto Mono', monospace; /* Robotic-looking font */
+    font-size: 24px;
+    color: #000;
+}
+
 .space-bg {
     background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
     background-repeat: repeat;
