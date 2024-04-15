@@ -1,3 +1,6 @@
+body {
+    padding-left: 150px; /* Adjust the padding to give more space for the sidebar */
+}
 .kris-bg {
     background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
     background-repeat: repeat;
