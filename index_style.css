@@ -115,4 +115,36 @@ h1 {
         padding: 8px;
     }
 }
+.start-menu {
+    position: fixed;
+    bottom: 35px; /* height of the taskbar */
+    left: 0;
+    background-color: #C0C0C0;
+    width: 200px;
+    border: 1px solid #000;
+    display: none;
+}
+
+.start-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.start-menu ul li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.start-menu ul li a:hover {
+    background-color: #0078D7;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
 
