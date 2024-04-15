@@ -44,7 +44,6 @@ body {
     width: 32px; /* Smaller to better fit */
     height: 32px; /* Maintain square aspect ratio */
     margin-right: 5px; /* Reduced margin */
-    cursor: pointer;
 }
 
 .clock {
@@ -64,8 +63,29 @@ body {
     display: none;
 }
 
-
 .hidden {
     display: none;
 }
 
+/* New CSS for social links */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the items horizontally */
+    margin-top: 20px;
+}
+
+.link-item {
+    margin: 10px;
+    text-align: center; /* Center the text and images */
+}
+
+.link-item img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-bottom: 5px; /* Space between the image and the text */
+}
+
+.link-item p {
+    font-size: 14px; /* Adjust the font size as needed */
+}
