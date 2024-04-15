@@ -8,7 +8,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2em; /* Adjust size as needed */
     margin-top: 20px;
     font-weight: 700;
 }
@@ -21,7 +21,7 @@ h1 {
 }
 
 .item img {
-    width: 100%;
+    width: 100%; /* Make images responsive */
     height: auto;
     display: block;
 }
@@ -31,45 +31,30 @@ h1 {
     margin-top: 10px;
 }
 
+/* Enhancements for aesthetics */
 .item {
-    background: #333;
+    background: #333; /* Dark grey background for items */
     padding: 10px;
     border-radius: 5px;
 }
 
 .popup {
     position: fixed;
-    width: 50%;
+    width: 50%;  /* Adjust width as needed */
+    height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff; /* White background for classic dialog look */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    border: 3px solid #000; /* Black border for sharp window contrast */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth, giving a slightly modern touch */
-    border-radius: 5px; /* Slight rounding of corners for a modern touch, can be removed for more authenticity */
-    padding: 20px;
+    z-index: 1000; /* Ensure it's on top */
+    padding: 20px; /* Adds some padding around the image */
+    border-radius: 10px; /* Optional: Rounds the corners of the popup */
 }
 
 .popup-image {
-    width: 90%; /* Adjust as necessary to fit the design */
-    height: auto;
-    cursor: pointer; /* Suggests interactivity */
-}
-
-/* Simulated Window Control Buttons, enhancing the Windows XP feel */
-.popup:before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 12px;
-    height: 12px;
-    background-color: #ff5b5b; /* Red close button, characteristic of Windows controls */
-    border-radius: 50%;
-    box-shadow: 0 0 2px black;
-    cursor: pointer;
+    width: 100%; /* Adjust the image to fit within the popup */
+    cursor: pointer; /* Indicates the image can be clicked */
 }
