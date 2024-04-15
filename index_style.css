@@ -1,4 +1,3 @@
-
 body {
     padding-left: 150px; /* Adjust the padding to give more space for the sidebar */
 }
@@ -69,5 +68,4 @@ body {
 .hidden {
     display: none;
 }
-
 
