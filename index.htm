@@ -81,6 +81,22 @@ document.querySelector('.start-menu-icon').addEventListener('click', function() 
 <div class="desktop-icons">
     <!-- Your links formatted as desktop icons here -->
 </div>
+<script>
+function updateClock() {
+    var now = new Date(); // Current date and time
+    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    document.querySelector('.clock').innerText = strTime;
+    setTimeout(updateClock, 1000); // Update time every second
+}
+updateClock();
+</script>
 
 </body>
     <div class="start-menu hidden">
