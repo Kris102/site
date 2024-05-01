@@ -1,109 +1,160 @@
-<!DOCTYPE html>
-<html class="kris-bg">
-<head>
-    <title>Kris102</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index_style.css">
-    <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
-</head>
-
-<body>
-<div class="taskbar">
-    <div class="start-menu-icon">
-        <img src="http://img1.wikia.nocookie.net/__cb20070916085445/windows/images/c/c7/Start_button_(Windows_XP).png" alt="Start Menu">
-    </div>
-    <div class="taskbar-items">
-        <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" class="taskbar-icon">
-        <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Portfolio" class="taskbar-icon">
-        <!-- Add other icons similarly -->
-    </div>
-    <div class="clock">12:00 PM</div>
-</div>
-<center>
-    <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" width="290" height="117">
-</center>
-<div class="social-links">
-    <div class="link-item">
-        <a href="portfolio.html">
-            <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Graphic Design Portfolio">
-            <p>Portfolio.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://www.instagram.com/krisg102/">
-            <img src="https://i.ibb.co/z7YDck2/580b57fcd9996e24bc43c521.png" alt="Instagram">
-            <p>Instagram.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://marksnihongoguide.super.site/">
-            <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713191833/wwxrrsszsq4ndzud0j15.png" alt="Nihongo Guide">
-            <p>Nihongo Guide.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://soundcloud.com/user-808808879">
-            <img src="https://i.ibb.co/PhtHmPW/58af04446c252499281ae91f.png" alt="SoundCloud">
-            <p>SoundCloud.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://www.youtube.com/c/Kris102/featured">
-            <img src="https://i.ibb.co/3R6NTpr/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube">
-            <p>YouTube.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://anilist.co/user/Kris102/">
-            <img src="https://64.media.tumblr.com/970e765eb0187dc862ceb720d80aa5f6/0e6f1532c0e057a2-c9/s1280x1920/5c4e6e8e6750b07034713611f15ab737a3b6fd52.jpg" alt="anilist">
-            <p>Anime List.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://discord.gg/EuwyNRdQY2">
-            <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="Discord">
-            <p>Discord.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="Summoning_Yoda.html">
-            <img src="https://i.ibb.co/W0G1HJF/FUK.png" alt="Summon Yoda">
-            <p>Summon Yoda.exe</p>
-        </a>
-    </div>
-</div>
-<div>
-    <h1>僕はクリスです</h1>
-</div>
-<script>
-document.querySelector('.start-menu-icon').addEventListener('click', function() {
-    var menu = document.querySelector('.start-menu');
-    menu.classList.toggle('hidden');
-});
-</script>
-<div class="desktop-icons">
-    <!-- Your links formatted as desktop icons here -->
-</div>
-<script>
-function updateClock() {
-    var now = new Date(); // Current date and time
-    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // Hour '0' should be '12'
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
-    document.querySelector('.clock').innerText = strTime;
-    setTimeout(updateClock, 1000); // Update time every second
+.kris-bg {
+    background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
+    background-repeat: repeat;
 }
-updateClock();
-</script>
 
-<div class="start-menu hidden">
-    <ul>
-        <li><a href="portfolio.html">Portfolio.exe</a></li>
-        <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
-        <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
-        <li
+.space-bg {
+    background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
+    background-repeat: repeat;
+}
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensure it starts from the left edge */
+    width: 100%;
+    height: 40px; /* Set a fixed height */
+    background-color: #003399;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 0; /* Center padding vertically */
+    justify-content: space-between; /* Space between items */
+}
+
+.taskbar-icon {
+    width: 48px; /* Increase size */
+    height: 48px; /* Increase size */
+    margin: 0 5px; /* Margin for spacing */
+    cursor: pointer;
+}
+
+}
+
+.start-menu-icon img {
+    width: 36px;
+    height: auto;
+    cursor: pointer;
+}
+
+.taskbar-items {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.taskbar-icon {
+    width: 32px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.clock {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+body {
+    font-family: 'Roboto Mono', monospace; /* Uniform font family */
+    background: transparent;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #000;
+    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-item {
+    text-align: center;
+    width: 120px;
+}
+
+.link-item a {
+    display: block;
+    padding: 10px;
+    background-color: #D4D4D8;
+    border: 1px solid #FFF;
+    box-shadow: inset -1px -1px 0 0 #0A246A, inset 1px 1px 0 0 #BFCBFD, 1px 1px 0 0 #000;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-item a:hover {
+    background-color: #E4E4F7; /* Lighter grey to simulate button press */
+    box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
+}
+
+.link-item img {
+    width: 100%;
+    height: auto;
+}
+
+.link-item p {
+    font-size: 14px;
+    color: #333;
+    text-shadow: 1px 1px 0px #fff; /* Additional styling for text shadow */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    h1 {
+        font-size: 18px; /* Smaller font size on mobile */
+    }
+
+    .link-item a {
+        padding: 8px;
+    }
+}
+.start-menu {
+    position: fixed;
+    bottom: 35px; /* height of the taskbar */
+    left: 0;
+    background-color: #C0C0C0;
+    width: 200px;
+    border: 1px solid #000;
+    display: none;
+}
+
+.start-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.start-menu ul li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.start-menu ul li a:hover {
+    background-color: #0078D7;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
