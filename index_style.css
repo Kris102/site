@@ -38,9 +38,10 @@
 }
 
 .taskbar-items {
-    flex-grow: 1;
+    width: fit-content;
     display: flex;
     align-items: center;
+    gap: 10px; 
 }
 
 .taskbar-icon {
