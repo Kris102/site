@@ -25,10 +25,10 @@
 
 .taskbar-icon {
     width: 32px; /* Decrease width */
-    height: 32px; /* Decrease height */
     margin-right: 10px;
     cursor: pointer;
 }
+
 
 
 .start-menu-icon img {
