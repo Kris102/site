@@ -161,7 +161,7 @@ h1 {
     display: none;
 }
 .taskbar-icon.spotify {
-    width: 32px; /* Adjust the width */
+    width: 10px; /* Adjust the width */
     height: auto; /* Maintain aspect ratio */
     margin-right: 10px;
     cursor: pointer;
