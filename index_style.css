@@ -77,7 +77,8 @@ h1 {
 
 .link-item {
     text-align: center;
-    width: 120px;
+    width: 140px;
+    margin: 0 10px;
 }
 
 .link-item a {
