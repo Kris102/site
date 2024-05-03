@@ -7,6 +7,7 @@
     background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
     background-repeat: repeat;
 }
+
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -20,16 +21,15 @@
     justify-content: space-between;
     padding: 5px 0;
     z-index: 9999; /* Ensure it stays above other content */
-
 }
 
 .taskbar-icon {
-    width: 48px;
-    height: 48px;
+    width: 32px; /* Decrease width */
+    height: 32px; /* Decrease height */
     margin: 0 5px;
     cursor: pointer;
-
 }
+
 
 .start-menu-icon img {
     width: 36px;
