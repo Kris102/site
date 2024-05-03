@@ -1,3 +1,4 @@
+
 .kris-bg {
     background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
     background-repeat: repeat;
@@ -158,5 +159,11 @@ h1 {
 
 .hidden {
     display: none;
+}
+.taskbar-icon.spotify {
+    width: 32px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    cursor: pointer;
 }
 
