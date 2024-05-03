@@ -25,11 +25,10 @@
 
 .taskbar-icon {
     width: 32px; /* Decrease width */
+    height: auto;
     margin-right: 10px;
     cursor: pointer;
 }
-
-
 
 .start-menu-icon img {
     width: 36px;
@@ -43,17 +42,9 @@
     align-items: center;
 }
 
-.taskbar-icon {
-    width: 32px;
-    height: auto;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
 .clock {
     font-family: 'Roboto Mono', monospace;
 }
-
 
 body {
     font-family: 'Roboto Mono', monospace; /* Uniform font family */
@@ -128,6 +119,7 @@ h1 {
         padding: 8px;
     }
 }
+
 .start-menu {
     position: fixed;
     bottom: 35px; /* height of the taskbar */
