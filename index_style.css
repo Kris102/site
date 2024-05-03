@@ -23,12 +23,10 @@
 }
 
 .taskbar-icon {
-    width: 48px; /* Increase size */
-    height: 48px; /* Increase size */
-    margin: 0 5px; /* Margin for spacing */
+    width: 32px; /* Adjust the size of the taskbar icons */
+    height: auto;
+    margin-right: 5px; /* Adjust the margin between icons */
     cursor: pointer;
-}
-
 }
 
 .start-menu-icon img {
@@ -38,10 +36,11 @@
 }
 
 .taskbar-items {
-    width: fit-content;
+    width: calc(100% - 100px); /* Set a fixed width for the taskbar items */
     display: flex;
     align-items: center;
-    gap: 10px; 
+    justify-content: flex-end; /* Align items to the right */
+    gap: 10px; /* Adjust the gap between items */
 }
 
 .taskbar-icon {
