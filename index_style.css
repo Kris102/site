@@ -160,10 +160,4 @@ h1 {
 .hidden {
     display: none;
 }
-.taskbar-icon.spotify {
-    width: 10px; /* Adjust the width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
-    cursor: pointer;
-}
 
