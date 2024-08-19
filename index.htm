@@ -1,3 +1,11 @@
+Your code is mostly correct, but there are a few issues and redundancies that need to be addressed. Below is the cleaned-up and corrected version of your HTML code:
+
+1. **Fixed Double Closing `</html>` Tags:** Removed the redundant closing `</html>` and `</body>` tags.
+2. **Moved the `desktop-icons` and `start-menu` Divs:** Placed these divs above the `<script>` tag to ensure they are properly recognized by the JavaScript.
+
+Here's the revised code:
+
+```html
 <!DOCTYPE html>
 <html class="kris-bg">
 <head>
@@ -144,10 +152,22 @@
             <span class="popup-title">YouTube Video</span>
             <button class="close-button" onclick="closePopup()">X</button>
         </div>
-        <iframe width="300" height="169" src="https://youtu.be/lu_YBPoeTEQ?si=LKicpY05b-aciyWf" 
+        <iframe width="300" height="169" src="https://www.youtube.com/embed/lu_YBPoeTEQ?si=LKicpY05b-aciyWf" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    
+
+    <div class="desktop-icons">
+        <!-- Your links formatted as desktop icons here -->
+    </div>
+
+    <div class="start-menu hidden">
+        <ul>
+            <li><a href="portfolio.html">Portfolio.exe</a></li>
+            <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
+            <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
 
     <script>
         document.querySelector('.start-menu-icon').addEventListener('click', function() {
@@ -166,32 +186,4 @@
             minutes = minutes < 10 ? '0' + minutes : minutes;
             var strTime = hours + ':' + minutes + ' ' + ampm;
             document.querySelector('.clock').innerText = strTime;
-            setTimeout(updateClock, 1000); // Update time every second
-        }
-        updateClock();
-
-        function closePopup() {
-            document.getElementById('popup-video').classList.add('hidden');
-        }
-    </script>
-
-    <div class="desktop-icons">
-        <!-- Your links formatted as desktop icons here -->
-    </div>
-
-    <div class="start-menu hidden">
-        <ul>
-            <li><a href="portfolio.html">Portfolio.exe</a></li>
-            <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
-            <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
-            <!-- Add more menu items as needed -->
-        </ul>
-
-
-</body>
-</html>
-
-
-</body>
-</html>
-
+           
