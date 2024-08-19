@@ -1,3 +1,4 @@
+/* Backgrounds */
 .kris-bg {
     background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
     background-repeat: repeat;
@@ -7,6 +8,8 @@
     background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
     background-repeat: repeat;
 }
+
+/* Taskbar */
 .taskbar {
     position: fixed;
     bottom: 0;
@@ -20,17 +23,17 @@
     padding: 5px 0;
     justify-content: space-between;
 }
+
 .taskbar-icon img {
     width: 40px;
     height: auto;
     cursor: pointer;
-    transition: filter 0.1s ease-in-out; /* Add a transition effect for smoother change */
+    transition: filter 0.1s ease-in-out;
 }
 
 .taskbar-icon:hover img {
-    filter: brightness(180%); /* Increase brightness on hover */
+    filter: brightness(180%);
 }
-
 
 .start-menu-icon img {
     width: 155px;
@@ -42,15 +45,16 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
 }
+
 .clock {
     font-family: 'Roboto Mono', monospace;
 }
 
-
+/* Body */
 body {
-    font-family: 'Roboto Mono', monospace; /* Uniform font family */
+    font-family: 'Roboto Mono', monospace, sans-serif;
     background: transparent;
     text-align: center;
     padding: 20px;
@@ -60,9 +64,10 @@ body {
 h1 {
     font-size: 24px;
     color: #000;
-    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
+    text-shadow: 1px 1px 0px #fff;
 }
 
+/* Social Links */
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -72,8 +77,8 @@ h1 {
 
 .link-item {
     text-align: center;
-    width: 140px; /* Adjust width to accommodate widest icon */
-    margin: 0 10px; /* Add some margin for spacing */
+    width: 140px;
+    margin: 0 10px;
 }
 
 .link-item a {
@@ -88,7 +93,7 @@ h1 {
 }
 
 .link-item a:hover {
-    background-color: #E4E4F7; /* Lighter grey to simulate button press */
+    background-color: #E4E4F7;
     box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
 }
 
@@ -100,7 +105,7 @@ h1 {
 .link-item p {
     font-size: 14px;
     color: #333;
-    text-shadow: 1px 1px 0px #fff; /* Additional styling for text shadow */
+    text-shadow: 1px 1px 0px #fff;
 }
 
 /* Responsive styles */
@@ -111,20 +116,22 @@ h1 {
     }
 
     .link-item {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 
     h1 {
-        font-size: 18px; /* Smaller font size on mobile */
+        font-size: 18px;
     }
 
     .link-item a {
         padding: 8px;
     }
 }
+
+/* Start Menu */
 .start-menu {
     position: fixed;
-    bottom: 35px; /* height of the taskbar */
+    bottom: 35px;
     left: 0;
     background-color: #C0C0C0;
     width: 200px;
@@ -151,10 +158,12 @@ h1 {
     color: white;
 }
 
+/* Hidden Class */
 .hidden {
     display: none;
 }
 
+/* Pop-up */
 .popup {
     position: fixed;
     bottom: 50px;
@@ -207,4 +216,5 @@ iframe {
 .popup.hidden {
     display: none;
 }
+
 
