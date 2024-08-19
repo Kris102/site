@@ -1,158 +1,174 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
 
 .kris-bg {
-    background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
-    background-repeat: repeat;
+    background: url('https://wallpaperaccess.com/full/2871799.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-.space-bg {
-    background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
-    background-repeat: repeat;
-}
 .taskbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    background-color: #C0C0C0;
+    border-top: 2px solid #000;
     height: 40px;
-    background-color: #003399;
-    color: white;
     display: flex;
-    align-items: center;
-    padding: 5px 0;
     justify-content: space-between;
-}
-.taskbar-icon img {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
-    transition: filter 0.1s ease-in-out; /* Add a transition effect for smoother change */
-}
-
-.taskbar-icon:hover img {
-    filter: brightness(180%); /* Increase brightness on hover */
-}
-
-
-.start-menu-icon img {
-    width: 155px;
-    height: auto;
-    cursor: pointer;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .taskbar-items {
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: flex-end; /* Align items to the right */
 }
+
+.start-menu-icon img {
+    height: 28px;
+    cursor: pointer;
+}
+
+.taskbar-icon img {
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
 .clock {
-    font-family: 'Roboto Mono', monospace;
-}
-
-
-body {
-    font-family: 'Roboto Mono', monospace; /* Uniform font family */
-    background: transparent;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-}
-
-h1 {
-    font-size: 24px;
+    font-size: 14px;
     color: #000;
-    text-shadow: 1px 1px 0px #fff; /* Light shadow for a retro effect */
+    font-family: 'Roboto Mono', monospace;
 }
 
 .social-links {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .link-item {
     text-align: center;
-    width: 140px; /* Adjust width to accommodate widest icon */
-    margin: 0 10px; /* Add some margin for spacing */
-}
-
-.link-item a {
-    display: block;
-    padding: 10px;
-    background-color: #D4D4D8;
-    border: 1px solid #FFF;
-    box-shadow: inset -1px -1px 0 0 #0A246A, inset 1px 1px 0 0 #BFCBFD, 1px 1px 0 0 #000;
-    border-radius: 3px;
-    text-decoration: none;
-    color: black;
-}
-
-.link-item a:hover {
-    background-color: #E4E4F7; /* Lighter grey to simulate button press */
-    box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
+    margin: 10px 20px;
 }
 
 .link-item img {
-    width: 100%;
-    height: auto;
+    height: 80px;
+    width: 80px;
+    border: 2px solid #000;
+    padding: 5px;
+    background-color: #C0C0C0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .link-item p {
     font-size: 14px;
-    color: #333;
-    text-shadow: 1px 1px 0px #fff; /* Additional styling for text shadow */
+    color: #000;
+    margin-top: 5px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .link-item {
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    h1 {
-        font-size: 18px; /* Smaller font size on mobile */
-    }
-
-    .link-item a {
-        padding: 8px;
-    }
-}
 .start-menu {
     position: fixed;
-    bottom: 35px; /* height of the taskbar */
-    left: 0;
-    background-color: #C0C0C0;
+    bottom: 40px;
+    left: 10px;
     width: 200px;
-    border: 1px solid #000;
-    display: none;
+    background-color: #C0C0C0;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .start-menu ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 10px;
+}
+
+.start-menu ul li {
+    margin-bottom: 10px;
 }
 
 .start-menu ul li a {
-    display: block;
-    padding: 8px 12px;
     text-decoration: none;
-    color: black;
+    color: #000;
+    font-size: 14px;
     font-family: 'Roboto Mono', monospace;
 }
 
-.start-menu ul li a:hover {
+.start-menu.hidden {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.desktop-icons {
+    position: relative;
+    height: 70vh;
+}
+
+.popup {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 320px;
+    border: 2px solid #000;
+    background-color: #C0C0C0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0078D7;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+    font-family: 'Roboto Mono', monospace;
     color: white;
 }
 
-.hidden {
+.popup-title {
+    font-size: 14px;
+}
+
+.close-button {
+    background-color: #C0C0C0;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    line-height: 18px;
+    color: #000;
+}
+
+.close-button:hover {
+    background-color: #FF0000;
+    color: #FFF;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.popup.hidden {
     display: none;
 }
 
