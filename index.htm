@@ -5,6 +5,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index_style.css">
     <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
+    <style>
+        .popup {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            width: 320px;
+            border: 2px solid #000;
+            background-color: #C0C0C0;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0078D7;
+            padding: 5px;
+            border-bottom: 2px solid #000;
+            font-family: 'Roboto Mono', monospace;
+            color: white;
+        }
+
+        .popup-title {
+            font-size: 14px;
+        }
+
+        .close-button {
+            background-color: #C0C0C0;
+            border: 1px solid #000;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            font-family: 'Roboto Mono', monospace;
+            text-align: center;
+            line-height: 18px;
+            color: #000;
+        }
+
+        .close-button:hover {
+            background-color: #FF0000;
+            color: #FFF;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+
+        .popup.hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,104 +79,114 @@
         </div>
         <div class="clock">12:00 PM</div>
     </div>
-<center>
-    <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" width="290" height="117">
-</center>
-<div class="social-links">
-    <div class="link-item">
-        <a href="portfolio.html">
-            <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Graphic Design Portfolio">
-            <p>Portfolio.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://www.instagram.com/krisg102/">
-            <img src="https://i.ibb.co/z7YDck2/580b57fcd9996e24bc43c521.png" alt="Instagram">
-            <p>Instagram.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://marksnihongoguide.super.site/">
-            <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713191833/wwxrrsszsq4ndzud0j15.png" alt="Nihongo Guide">
-            <p>Nihongo Guide.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://soundcloud.com/user-808808879">
-            <img src="https://i.ibb.co/PhtHmPW/58af04446c252499281ae91f.png" alt="SoundCloud">
-            <p>SoundCloud.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://www.youtube.com/c/Kris102/featured">
-            <img src="https://i.ibb.co/3R6NTpr/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube">
-            <p>YouTube.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://anilist.co/user/Kris102/">
-            <img src="https://64.media.tumblr.com/970e765eb0187dc862ceb720d80aa5f6/0e6f1532c0e057a2-c9/s1280x1920/5c4e6e8e6750b07034713611f15ab737a3b6fd52.jpg" alt="anilist">
-            <p>Anime List.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="https://discord.gg/EuwyNRdQY2">
-            <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="Discord">
-            <p>Discord.exe</p>
-        </a>
-    </div>
-    <div class="link-item">
-        <a href="Summoning_Yoda.html">
-            <img src="https://i.ibb.co/W0G1HJF/FUK.png" alt="Summon Yoda">
-            <p>Summon Yoda.exe</p>
-        </a>
-    </div>
-</div>
-<div>
-    <h1>僕はクリスです</h1>
-</div>
-<script>
-document.querySelector('.start-menu-icon').addEventListener('click', function() {
-    var menu = document.querySelector('.start-menu');
-    menu.classList.toggle('hidden');
-});
-</script>
-<div class="desktop-icons">
-    <!-- Your links formatted as desktop icons here -->
-</div>
-<script>
-function updateClock() {
-    var now = new Date(); // Current date and time
-    now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // Hour '0' should be '12'
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
-    document.querySelector('.clock').innerText = strTime;
-    setTimeout(updateClock, 1000); // Update time every second
-}
-updateClock();
-</script>
 
-<div class="start-menu hidden">
-    <ul>
-        <li><a href="portfolio.html">Portfolio.exe</a></li>
-        <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
-        <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
-        <!-- Add more menu items as needed -->
-    </ul>
-</div>
+    <center>
+        <img src="https://i.ibb.co/drs8JSR/vbcvbcvbcb-1.png" alt="It's Kris!" width="290" height="117">
+    </center>
 
-<script>
-document.querySelector('.start-menu-icon').addEventListener('click', function() {
-    var menu = document.querySelector('.start-menu');
-    menu.classList.remove('hidden');
-});
-</script>
+    <div class="social-links">
+        <div class="link-item">
+            <a href="portfolio.html">
+                <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Graphic Design Portfolio">
+                <p>Portfolio.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.instagram.com/krisg102/">
+                <img src="https://i.ibb.co/z7YDck2/580b57fcd9996e24bc43c521.png" alt="Instagram">
+                <p>Instagram.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://marksnihongoguide.super.site/">
+                <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713191833/wwxrrsszsq4ndzud0j15.png" alt="Nihongo Guide">
+                <p>Nihongo Guide.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://soundcloud.com/user-808808879">
+                <img src="https://i.ibb.co/PhtHmPW/58af04446c252499281ae91f.png" alt="SoundCloud">
+                <p>SoundCloud.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://www.youtube.com/c/Kris102/featured">
+                <img src="https://i.ibb.co/3R6NTpr/hd-youtube-logo-png-transparent-background-20.png" alt="YouTube">
+                <p>YouTube.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://anilist.co/user/Kris102/">
+                <img src="https://64.media.tumblr.com/970e765eb0187dc862ceb720d80aa5f6/0e6f1532c0e057a2-c9/s1280x1920/5c4e6e8e6750b07034713611f15ab737a3b6fd52.jpg" alt="anilist">
+                <p>Anime List.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="https://discord.gg/EuwyNRdQY2">
+                <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="Discord">
+                <p>Discord.exe</p>
+            </a>
+        </div>
+        <div class="link-item">
+            <a href="Summoning_Yoda.html">
+                <img src="https://i.ibb.co/W0G1HJF/FUK.png" alt="Summon Yoda">
+                <p>Summon Yoda.exe</p>
+            </a>
+        </div>
+    </div>
 
+    <div>
+        <h1>僕はクリスです</h1>
+    </div>
+
+    <div id="popup-video" class="popup">
+        <div class="popup-header">
+            <span class="popup-title">YouTube Video</span>
+            <button class="close-button" onclick="closePopup()">X</button>
+        </div>
+        <iframe width="300" height="169" src="https://youtu.be/lu_YBPoeTEQ?si=Bjf6EnlaoZ-Q0eAQ" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        document.querySelector('.start-menu-icon').addEventListener('click', function() {
+            var menu = document.querySelector('.start-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        function updateClock() {
+            var now = new Date(); // Current date and time
+            now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var strTime = hours + ':' + minutes + ' ' + ampm;
+            document.querySelector('.clock').innerText = strTime;
+            setTimeout(updateClock, 1000); // Update time every second
+        }
+        updateClock();
+
+        function closePopup() {
+            document.getElementById('popup-video').classList.add('hidden');
+        }
+    </script>
+
+    <div class="desktop-icons">
+        <!-- Your links formatted as desktop icons here -->
+    </div>
+
+    <div class="start-menu hidden">
+        <ul>
+            <li><a href="portfolio.html">Portfolio.exe</a></li>
+            <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
+            <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
 
 </body>
 </html>
+
