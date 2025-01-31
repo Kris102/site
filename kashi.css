@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #e60000;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Search Bar */
+.search-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 60%;
+    max-width: 600px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #888;
+}
+
+/* Lyrics Section */
+.lyrics-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lyric-card {
+    background-color: #222;
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lyric-title {
+    font-size: 1.8rem;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+.lyric-text {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #bbb;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 90%;
+    }
+
+    .lyric-card {
+        width: 90%;
+    }
+}
