@@ -24,6 +24,13 @@
     justify-content: space-between;
 }
 
+.taskbar-icon {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center; /* Ensures horizontal alignment */
+    margin: 0 5px; /* Adjusts the space between icons */
+}
+
 .taskbar-icon img {
     width: 40px;
     height: auto;
@@ -46,6 +53,10 @@
     align-items: center;
     gap: 10px;
     justify-content: flex-end;
+}
+
+.clock {
+    font-family: 'Roboto Mono', monospace;
 }
 
 .clock {
