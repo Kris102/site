@@ -58,6 +58,12 @@
         .popup.hidden {
             display: none;
         }
+
+        .clock {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 20px;
+            color: white;
+        }
     </style>
 </head>
 
@@ -157,7 +163,6 @@
             <li><a href="portfolio.html">Portfolio.exe</a></li>
             <li><a href="https://www.instagram.com/krisg102/">Instagram.exe</a></li>
             <li><a href="Summoning_Yoda.html">Summon Yoda.exe</a></li>
-            <!-- Add more menu items as needed -->
         </ul>
     </div>
 
@@ -167,6 +172,7 @@
             menu.classList.toggle('hidden');
         });
 
+        // Clock update function
         function updateClock() {
             var now = new Date(); // Current date and time
             now.setMinutes(now.getMinutes() + now.getTimezoneOffset() + 330); // Convert to IST (+5:30)
@@ -178,4 +184,14 @@
             minutes = minutes < 10 ? '0' + minutes : minutes;
             var strTime = hours + ':' + minutes + ' ' + ampm;
             document.querySelector('.clock').innerText = strTime;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initialize the clock immediately on page load
+        updateClock();
+    </script>
+</body>
+</html>
            
