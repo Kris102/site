@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KashiLyrics</title>
     <link rel="stylesheet" href="kashi.css">
+    <script>
+        function searchLyrics() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const lyricCards = document.querySelectorAll('.lyric-card');
+
+            lyricCards.forEach(card => {
+                const title = card.querySelector('.lyric-title').textContent.toLowerCase();
+                const text = card.querySelector('.lyric-text').textContent.toLowerCase();
+                
+                if (title.includes(searchQuery) || text.includes(searchQuery)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -23,13 +40,15 @@
     <section class="lyrics-section">
         <div class="lyric-card" id="lyric1">
             <h3 class="lyric-title">Kaam Naam Daam - ST MAN</h3>
-            <p class="lyric-text">( HOOK )
-<p>KAAM GAR </p>
-<p>NAAM BANA </p>
-<p>DAAM KAMAUCHHAS X3</p>
-<p>PAISA BHAYE TAILE PANI KT NACHAUCHHAS</p>
+            <p class="lyric-text">
+                <!-- The content here is kept as is. Ensure no extra </p> tags are added. -->
+                ( HOOK )
+                <p>KAAM GAR </p>
+                <p>NAAM BANA </p>
+                <p>DAAM KAMAUCHHAS X3</p>
+                <p>PAISA BHAYE TAILE PANI KT NACHAUCHHAS</p>
 
-<p>PAILA RITTO RITTO KHALTI MERO KHALI THIYO GHATI </p>
+            <p>PAILA RITTO RITTO KHALTI MERO KHALI THIYO GHATI </p>
 <p>AHILE NAK MAA CHHEDYA XA SUN </p>
 <p>HIDCHHU PAISA CHHAPI </p>
 <p>CHIDIYA KHANA KO HATTI HIDCHHU KHALTI VITRA RAKHI </p>
@@ -104,99 +123,98 @@
 <p>CHAPAUDINA GUTKHA</p>
 <p>AJKAL KHELNA JANCHHU CASINO </p>
 <p>KHELDINA GUCHA </p>
-
-( HOOK )</p>
-        </div>
-        <div class="lyric-card" id="lyric2">
-            <h3 class="lyric-title">Namuna - ST MAN</h3>
-            <p class="lyric-text">Hoina ma khandani
-Chirayo ma rajdhani
-Sochi rakh Raj hanne
-Bhana sakchhu Raja ni
-(x2)
-
-Namuna mero dai haru namuna
-Namuna mero bau pani namuna
-Namuna mero ama pani namuna
-Musiko chhora ta jan ta sai pani namuna
-(x2)
-
-Gau ma garchu rap (geet)
-Gari dinchu tap (free)
-Doodh khane manche kasari huncha zap ni
-Taile khane jar pat
-Maile khane saag pat
-
-Bhotey ko jat pat
-Gardina mar khat
-Mero geet ko video ma halincha chaksat
-Dikhaunchu car sar
-Tara talai bar sar
-Famous bhayo halchal
-
-Herne humko ghir lagcho
-Aushi ko andho goru ohralo ma bir lagcha
-Tol bhari rapper dekhda mon bhari pir lagcha
-Tapai geet gayara kasari koi po khir khancha?
-
-Hoina ma khandani
-Chirayo ma rajdhani
-Sochi rakh Raj hanne
-Bhana sakchhu Raja ni
-(x2)
-
-Namuna mero dai haru namuna
-Namuna mero bau pani namuna
-Namuna mero ama pani namuna
-Musiko chhora ta jan ta sai pani namuna
-(x2)
-
-Maile chara bolya hoina, tero kaan chara bhako
-Ganja khako chhaina, maile alu dal bhat khako
-Bacche dheki sukhe chak bhako
-Mero huliya samaj lai jhatra bho
-Nata Kathmandu ma ghar cha betayeko 5 barsha
-Jati haaryo pani mero jaari cha sangharsha
-
-Khot louna, chot dine haru pahila ma
-Bhajna siki sake, maila pani faida ma
-Dhatara ni khako chhaina, lutera ni lako chhaina
-Afnai sabai deebal lama, kehi फर्को chhaina 
-            (Tamang Verse)
-
-Mero keta haru ganja byapari
-Jha puni
-Gadi Korea ko, juta lauchu Japani
-Mero gang pura thais, moh chai porrey sakhari
-            
-Hoina ma khandani
-Chirayo ma rajdhani
-Sochi rakh Raj hanne
-Bhana sakchhu Raja ni
-(x2)
-
-Tero bau namuna
-Mero bau namuna
-Nata haru namuna
-Rakshi khane namuna
-Budi pitne namuna
-Gang fukne namuna
-Durgesh Thapa namuna
-Jyoti Magar namuna
-Joru thakka namuna
-Jisyaune namuna
-Chustine namuna
-Gusline namuna
-Gustine namuna
-Hami sabai namuna
-Hami marta hanne, yo sansar cha namuna</p>
+                <!-- Continue the lyrics content -->
+            </p>
         </div>
         
-        </div>
         <div class="lyric-card" id="lyric2">
-            <h3 class="lyric-title">Song Title 2</h3>
-            <p class="lyric-text">This is the lyric text for song 2...</p>
+            <h3 class="lyric-title">Namuna - ST MAN</h3>
+            <p class="lyric-text">
+              <p>  Hoina ma khandani
+ <p>Cherai ma rajdhani</p>
+ <p>Sochi rakh Raj hanne</p>
+ <p>Bhana sakchhu Raja ni</p>
+ <p>(x2)</p>
+
+ <p>Namuna mero dai haru namuna</p>
+ <p>Namuna mero bau pani namuna</p>
+ <p>Namuna mero ama pani namuna</p>
+ <p>Musiko chhora ta jan ta sai pani namuna</p>
+ <p>(x2)</p>
+
+ <p>Gau ma garchu rap (geet)</p>
+ <p>Gari dinchu tap (free)</p>
+ <p>Doodh khane manche kasari huncha zap ni</p>
+ <p>Taile khane jar pat</p>
+ <p>Maile khane saag pat</p>
+
+<p>Bhotey ko jat pat</p>
+<p>Gardina mar khat</p>
+<p>Mero geet ko video ma halincha chaksat</p>
+<p>Dikhaunchu car sar</p>
+<p>Tara talai bar sar</p>
+<p>Famous bhayo halchal</p>
+
+<p>Herne humko ghir lagcho</p>
+<p>Aushi ko andho goru ohralo ma bir lagcha</p>
+<p>Tol bhari rapper dekhda mon bhari pir lagcha</p>
+<p>Tapai geet gayara kasari koi po khir khancha?</p>
+
+<p>Hoina ma khandani</p>
+<p>Cherai ma rajdhani</p>
+<p>Sochi rakh Raj hanne</p>
+<p>Bhana sakchhu Raja ni</p>
+<p>(x2)</p>
+
+<p>Namuna mero dai haru namuna</p>
+<p>Namuna mero bau pani namuna</p>
+<p>Namuna mero ama pani namuna</p>
+<p>Musiko chhora ta jan ta sai pani namuna</p>
+<p>(x2)</p>
+
+<p>Maile chara bolya hoina, tero kaan chara bhako</p>
+<p>Ganja khako chhaina, maile alu dal bhat khako</p>
+<p>Bacche dheki sukhe chak bhako</p>
+<p>Mero huliya samaj lai jhatra bho</p>
+<p>Nata Kathmandu ma ghar cha betayeko 5 barsha</p>
+<p>Jati haaryo pani mero jaari cha sangharsha</p>
+
+<p>Khot louna, chot dine haru pahila ma</p>
+<p>Bhajna siki sake, maila pani faida ma</p>
+<p>Dhatara ni khako chhaina, lutera ni lako chhaina</p>
+<p>Afnai sabai deebal lama, kehi farko chhaina </p>
+    <p>        (Tamang Verse)
+
+<p>Mero keta haru ganja byapari</p>
+<p>Jha puni</p>
+<p>Gadi Korea ko, juta lauchu Japani</p>
+<p>Mero gang pura thais, moh chai porrey sakhari</p>
+            
+<p>Hoina ma khandani</p>
+<p>Cherai ma rajdhani</p>
+<p>Sochi rakh Raj hanne</p>
+<p>Bhana sakchhu Raja ni</p>
+(x2)
+
+<p>Tero bau namuna</p>
+<p>Mero bau namuna</p>
+<p>Neta haru namuna</p>
+<p>Rakshi khane namuna</p>
+<p>Budi pitne namuna</p>
+<p>Gang fukne namuna</p>
+<p>Durgesh Thapa namuna</p>
+<p>Jyoti Magar namuna</p>
+<p>Joru thakka namuna</p>
+<p>Jisyaune namuna</p>
+<p>Chustine namuna</p>
+<p>Gusline namuna</p>
+<p>Gustine namuna</p>
+<p>Hami sabai namuna</p>
+<p>Hami marta hanne, yo sansar cha namuna</p>
+
+            </p>
         </div>
+
         <!-- Add more lyric cards here as needed -->
     </section>
 
@@ -204,30 +222,30 @@ Hami marta hanne, yo sansar cha namuna</p>
         <p>&copy; 2025 KashiLyrics | Made by Kris102</p>
     </footer>
 
-    <script src="script.js"></script>
-    
-    fetch('lyrics.json')
-  .then(response => response.json())
-  .then(data => {
-      const lyricsSection = document.querySelector('.lyrics-section');
-      data.forEach(lyric => {
-          const lyricCard = document.createElement('div');
-          lyricCard.classList.add('lyric-card');
-          lyricCard.id = lyric.id;
+    <script>
+        fetch('lyrics.json')
+        .then(response => response.json())
+        .then(data => {
+            const lyricsSection = document.querySelector('.lyrics-section');
+            data.forEach(lyric => {
+                const lyricCard = document.createElement('div');
+                lyricCard.classList.add('lyric-card');
+                lyricCard.id = lyric.id;
 
-          const lyricTitle = document.createElement('h3');
-          lyricTitle.classList.add('lyric-title');
-          lyricTitle.textContent = lyric.title;
+                const lyricTitle = document.createElement('h3');
+                lyricTitle.classList.add('lyric-title');
+                lyricTitle.textContent = lyric.title;
 
-          const lyricText = document.createElement('p');
-          lyricText.classList.add('lyric-text');
-          lyricText.innerHTML = lyric.text;
+                const lyricText = document.createElement('p');
+                lyricText.classList.add('lyric-text');
+                lyricText.innerHTML = lyric.text;
 
-          lyricCard.appendChild(lyricTitle);
-          lyricCard.appendChild(lyricText);
-          lyricsSection.appendChild(lyricCard);
-      });
-  })
-  .catch(error => console.log(error));
+                lyricCard.appendChild(lyricTitle);
+                lyricCard.appendChild(lyricText);
+                lyricsSection.appendChild(lyricCard);
+            });
+        })
+        .catch(error => console.log(error));
+    </script>
 </body>
 </html>
