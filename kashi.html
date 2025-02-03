@@ -205,5 +205,29 @@ Hami marta hanne, yo sansar cha namuna</p>
     </footer>
 
     <script src="script.js"></script>
+    
+    fetch('lyrics.json')
+  .then(response => response.json())
+  .then(data => {
+      const lyricsSection = document.querySelector('.lyrics-section');
+      data.forEach(lyric => {
+          const lyricCard = document.createElement('div');
+          lyricCard.classList.add('lyric-card');
+          lyricCard.id = lyric.id;
+
+          const lyricTitle = document.createElement('h3');
+          lyricTitle.classList.add('lyric-title');
+          lyricTitle.textContent = lyric.title;
+
+          const lyricText = document.createElement('p');
+          lyricText.classList.add('lyric-text');
+          lyricText.innerHTML = lyric.text;
+
+          lyricCard.appendChild(lyricTitle);
+          lyricCard.appendChild(lyricText);
+          lyricsSection.appendChild(lyricCard);
+      });
+  })
+  .catch(error => console.log(error));
 </body>
 </html>
