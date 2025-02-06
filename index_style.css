@@ -1,87 +1,229 @@
-/* General Page Styling */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Mono', monospace;
-    background-color: #1a1a1a;
-    color: #fff;
-    text-align: center;
+/* Backgrounds */
+.kris-bg {
+    background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
+    background-repeat: repeat;
+}
+
+.space-bg {
+    background-image: url('https://i.ibb.co/Z1m2YXJ/lh.jpg');
+    background-repeat: repeat;
 }
 
 /* Taskbar */
 .taskbar {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 40px;
-    background-color: #222;
+    background-color: #003399;
+    color: white;
     display: flex;
     align-items: center;
+    padding: 5px 0;
     justify-content: space-between;
-    padding: 0 10px;
 }
+
+.taskbar-icon {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center; /* Ensures horizontal alignment */
+    margin: 0 5px; /* Adjusts the space between icons */
+}
+
 .taskbar-icon img {
-    height: 30px;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: filter 0.1s ease-in-out;
+}
+
+.taskbar-icon:hover img {
+    filter: brightness(180%);
+}
+
+.start-menu-icon img {
+    width: 155px;
+    height: auto;
     cursor: pointer;
 }
+
+.taskbar-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
 .clock {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.clock {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    background: transparent;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #000;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Ensure there's space from the top */
+}
+
+.link-item {
+    text-align: center;
+    width: 140px;
+    margin: 10px;
+}
+
+.link-item a {
+    display: block;
+    padding: 10px;
+    background-color: #D4D4D8;
+    border: 1px solid #FFF;
+    box-shadow: inset -1px -1px 0 0 #0A246A, inset 1px 1px 0 0 #BFCBFD, 1px 1px 0 0 #000;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.link-item a:hover {
+    background-color: #E4E4F7;
+    box-shadow: inset 1px 1px 0 0 #0A246A, inset -1px -1px 0 0 #BFCBFD, -1px -1px 0 0 #000;
+}
+
+.link-item img {
+    width: 100%;
+    height: auto;
+}
+
+.link-item p {
     font-size: 14px;
+    color: #333;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link-item {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .link-item a {
+        padding: 8px;
+    }
 }
 
 /* Start Menu */
 .start-menu {
     position: fixed;
-    bottom: 40px;
-    left: 10px;
-    background: #333;
-    padding: 10px;
-    border-radius: 5px;
+    bottom: 35px;
+    left: 0;
+    background-color: #C0C0C0;
+    width: 200px;
+    border: 1px solid #000;
+    display: none;
 }
+
 .start-menu ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
-.start-menu ul li {
-    padding: 5px 10px;
-}
+
 .start-menu ul li a {
+    display: block;
+    padding: 8px 12px;
     text-decoration: none;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.start-menu ul li a:hover {
+    background-color: #0078D7;
     color: white;
 }
+
+/* Hidden Class */
 .hidden {
     display: none;
 }
 
-/* Social Links */
-.social-links {
-    margin-top: 20px;
-}
-.link-item {
-    display: inline-block;
-    margin: 10px;
-}
-.link-item img {
-    width: 50px;
-    height: 50px;
-}
-
-/* YouTube Popup */
+/* Pop-up */
 .popup {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
+    bottom: 50px;
+    right: 20px;
+    width: 320px;
+    border: 2px solid #000;
+    background-color: #C0C0C0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
+
 .popup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0078D7;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
 }
+
+.popup-title {
+    font-size: 14px;
+}
+
 .close-button {
+    background-color: #C0C0C0;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    line-height: 18px;
+    color: #000;
+}
+
+.close-button:hover {
+    background-color: #FF0000;
+    color: #FFF;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.popup.hidden {
+    display: none;
 }
