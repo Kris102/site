@@ -1,75 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="kris-bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="your-google-verification-code" />
-    <title>Windows XP Style Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kris102 | My Site ♡</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="クリスです。音楽を制作し、言語と医学を学んでいます。">
+    <meta name="keywords" content="Kris102, music, languages, medicine, self-produced, artist, learning, Japanese, Korean, English, Nepali, RnB, songwriting.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kris102">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Kris102 | My Site ♡">
+    <meta property="og:description" content="クリスです。音楽を制作し、言語と医学を学んでいます。">
+    <meta property="og:url" content="https://kris102.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="np0LDaZw2iqCVVb1-bqIU_jiMa8sNz5fYML4pBBOWqM">
+    
+    <!-- Fonts & Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index_style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
 </head>
 <body>
-    <div class="desktop">
-        <div class="icons-container">
-            <div class="icon">
-                <img src="portfolio-icon.png" alt="Portfolio">
-                <span>グラフィックデザイン.exe</span>
-            </div>
-            <div class="icon">
-                <img src="kashi-icon.png" alt="Kashi Lyrics">
-                <span>Kashi Lyrics.exe</span>
-            </div>
-            <div class="icon">
-                <img src="soundcloud-icon.png" alt="SoundCloud">
-                <span>SoundCloud.exe</span>
-            </div>
-            <div class="icon">
-                <img src="youtube-icon.png" alt="YouTube">
-                <span>YouTube.exe</span>
-            </div>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-icon start-menu-icon">
+            <img src="https://i.ibb.co/Z6qzNjq/start-menu.png" alt="Start" onclick="toggleStartMenu()">
         </div>
-        <div class="youtube-popup" id="youtubePopup">
-            <div class="popup-header">
-                <span>YouTube Video</span>
-                <button class="close-btn" onclick="closePopup()">X</button>
-            </div>
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <div class="taskbar-items">
+            <div class="clock" id="clock"></div>
         </div>
     </div>
-    
-    <div class="taskbar">
-        <div class="start-button" onclick="toggleStartMenu()">
-            <img src="start-button.png" alt="Start">
-        </div>
-        <div class="taskbar-icons">
-            <img src="spotify-icon.png" alt="Spotify">
-            <img src="portfolio-icon.png" alt="Portfolio">
-            <img src="instagram-icon.png" alt="Instagram">
-            <a href="https://soundcloud.com/your-soundcloud" target="_blank">
-                <img src="windows-media-player-icon.png" alt="SoundCloud">
+
+    <!-- Start Menu -->
+    <div class="start-menu hidden" id="startMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <div class="link-item">
+            <a href="https://www.youtube.com/channel/UC..." target="_blank">
+                <img src="https://i.ibb.co/xmnpJZj/youtube-icon.png" alt="YouTube">
+                <p>YouTube</p>
             </a>
         </div>
     </div>
-    
-    <div class="start-menu" id="startMenu">
-        <ul>
-            <li>Shutdown</li>
-            <li>Restart</li>
-            <li>グラフィックデザイン.exe</li>
-            <li>SoundCloud.exe</li>
-            <li>YouTube.exe</li>
-        </ul>
+
+    <!-- YouTube Popup -->
+    <div class="popup hidden" id="popup">
+        <div class="popup-header">
+            <span class="popup-title">YouTube</span>
+            <div class="close-button" onclick="togglePopup()">X</div>
+        </div>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoID" allowfullscreen></iframe>
     </div>
-    
+
     <script>
-        function closePopup() {
-            document.getElementById('youtubePopup').style.display = 'none';
-        }
-        
         function toggleStartMenu() {
-            const menu = document.getElementById('startMenu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            document.getElementById('startMenu').classList.toggle('hidden');
         }
+        function togglePopup() {
+            document.getElementById('popup').classList.toggle('hidden');
+        }
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>
-
