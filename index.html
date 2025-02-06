@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kris102 | My Site ♡</title>
-    
-    <!-- Meta Tags for SEO -->
     <meta name="description" content="クリスです。音楽を制作し、言語と医学を学んでいます。">
-    <meta name="keywords" content="Kris102, music, languages, medicine, self-produced, artist, learning, Japanese, Korean, English, Nepali, RnB, songwriting.">
+    <meta name="keywords" content="Kris102, music, languages, medicine, self-produced, artist, learning, Japanese, Korean, English, Nepali, RnB, songwriting">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kris102">
-    
-    <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Kris102 | My Site ♡">
     <meta property="og:description" content="クリスです。音楽を制作し、言語と医学を学んでいます。">
     <meta property="og:url" content="https://kris102.github.io/">
     <meta property="og:type" content="website">
-    
-    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="np0LDaZw2iqCVVb1-bqIU_jiMa8sNz5fYML4pBBOWqM">
-    
-    <!-- Fonts & Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>Kris102 | My Site ♡</title>
     <link rel="stylesheet" href="index_style.css">
-    
-    <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
 </head>
 <body>
@@ -32,9 +21,10 @@
         <div class="taskbar-icon start-menu-icon" onclick="toggleStartMenu()">
             <img src="https://i.ibb.co/Z6qzNjq/start-menu.png" alt="Start">
         </div>
-        <div class="clock" id="clock"></div>
+        <div class="taskbar-items">
+            <div class="clock" id="clock"></div>
+        </div>
     </div>
-
     <div class="start-menu hidden" id="startMenu">
         <ul>
             <li><a href="#">Home</a></li>
@@ -42,7 +32,6 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
-
     <div class="social-links">
         <div class="link-item">
             <a href="https://www.youtube.com/channel/UC..." target="_blank">
@@ -51,7 +40,6 @@
             </a>
         </div>
     </div>
-
     <div class="popup hidden" id="popup">
         <div class="popup-header">
             <span class="popup-title">YouTube</span>
@@ -59,7 +47,6 @@
         </div>
         <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoID" allowfullscreen></iframe>
     </div>
-
     <script>
         function toggleStartMenu() {
             document.getElementById('startMenu').classList.toggle('hidden');
@@ -71,9 +58,7 @@
             document.getElementById('clock').textContent = new Date().toLocaleTimeString();
         }
         setInterval(updateClock, 1000);
-        updateClock();
     </script>
 </body>
 </html>
-
 
