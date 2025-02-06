@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html class="kris-bg">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kris102 | My Site ♡</title>
     
     <!-- Meta Tags for SEO -->
@@ -8,8 +10,7 @@
     <meta name="keywords" content="Kris102, music, languages, medicine, self-produced, artist, learning, Japanese, Korean, English, Nepali, RnB, songwriting.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kris102">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Kris102 | My Site ♡">
     <meta property="og:description" content="クリスです。音楽を制作し、言語と医学を学んでいます。">
@@ -27,17 +28,13 @@
     <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
 </head>
 <body>
-    <!-- Taskbar -->
     <div class="taskbar">
-        <div class="taskbar-icon start-menu-icon">
-            <img src="https://i.ibb.co/Z6qzNjq/start-menu.png" alt="Start" onclick="toggleStartMenu()">
+        <div class="taskbar-icon start-menu-icon" onclick="toggleStartMenu()">
+            <img src="https://i.ibb.co/Z6qzNjq/start-menu.png" alt="Start">
         </div>
-        <div class="taskbar-items">
-            <div class="clock" id="clock"></div>
-        </div>
+        <div class="clock" id="clock"></div>
     </div>
 
-    <!-- Start Menu -->
     <div class="start-menu hidden" id="startMenu">
         <ul>
             <li><a href="#">Home</a></li>
@@ -46,7 +43,6 @@
         </ul>
     </div>
 
-    <!-- Social Links -->
     <div class="social-links">
         <div class="link-item">
             <a href="https://www.youtube.com/channel/UC..." target="_blank">
@@ -56,7 +52,6 @@
         </div>
     </div>
 
-    <!-- YouTube Popup -->
     <div class="popup hidden" id="popup">
         <div class="popup-header">
             <span class="popup-title">YouTube</span>
@@ -73,10 +68,12 @@
             document.getElementById('popup').classList.toggle('hidden');
         }
         function updateClock() {
-            const now = new Date();
-            document.getElementById('clock').textContent = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = new Date().toLocaleTimeString();
         }
         setInterval(updateClock, 1000);
+        updateClock();
     </script>
 </body>
 </html>
+
+
