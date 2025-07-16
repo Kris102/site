@@ -43,8 +43,8 @@
 }
 
 .start-menu-icon img {
-    width: 155px;
-    height: auto;
+    width: 145px;
+    height: 47px;
     cursor: pointer;
 }
 
@@ -177,9 +177,9 @@ h1 {
 /* Pop-up */
 .popup {
     position: fixed;
-    bottom: 50px;
+    bottom: 80px;
     right: 20px;
-    width: 320px;
+    width: 420px;
     border: 2px solid #000;
     background-color: #C0C0C0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -227,3 +227,4 @@ iframe {
 .popup.hidden {
     display: none;
 }
+
