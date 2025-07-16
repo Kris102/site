@@ -1,3 +1,39 @@
+/* ─── BOOT SPLASH ────────────────────────────── */
+@keyframes bootFill { from {width:0;} to {width:100%;} }
+
+#boot-splash{
+  position:fixed; inset:0;
+  background:#000;           /* black screen */
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999;
+  font-family:'Roboto Mono', monospace;
+  color:#009436;             /* matrix green */
+}
+
+.boot-inner{ text-align:center; }
+
+.boot-inner h2{
+  margin:12px 0 18px;
+  font-size:22px;
+  letter-spacing:1px;
+}
+
+.progress-frame{
+  width:260px; height:14px;
+  border:2px solid #fff;     /* white frame */
+  margin:0 auto;
+}
+
+.progress-bar{
+  height:100%;
+  background:#009436;
+  animation:bootFill 9ms linear forwards;
+}
+
+/* Fade-out after fill completes */
+@keyframes splashFade{ to {opacity:0; visibility:hidden;} }
+#boot-splash.done{ animation:splashFade .5s ease forwards .2s; }
+
 /* Backgrounds */
 .kris-bg {
     background-image: url('https://i.ibb.co/hyPLLVN/gdfgdfgbkjkbjk.png');
