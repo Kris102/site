@@ -1,3 +1,16 @@
+<!-- ░░ BOOT SPLASH ░░ -->
+<div id="boot-splash">
+  <div class="boot-inner">
+<img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1752665861/dfe97e9ab1df9b450ae92d750ac53dc7-removebg-preview_1_zxcvzv.png" alt="loading cat" style="height: 100px; margin-bottom: 10px;">
+
+    <h2>KrisOS is loading…</h2>
+
+    <div class="progress-frame">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+</div>
+
 <!DOCTYPE html>
 <html class="kris-bg">
 <head>
@@ -19,6 +32,7 @@
 </head>
           <head>  
     <style>
+        
         .popup {
             position: fixed;
             bottom: 80px;
@@ -182,15 +196,16 @@
 
 <!-- SoundCloud profile embed for bottom-center -->
 <div id="popup-sc-center" class="popup"
-     style="left:50%; transform:translateX(-50%); width:340px;">
+     style="left:50%; transform:translateX(-50%); width:550px;">
   <div class="popup-header">
     <span class="popup-title">SoundCloud</span>
     <button class="close-button" onclick="closePopup('popup-sc-center')">X</button>
   </div>
-  <iframe width="320" height="300"
-          scrolling="no" frameborder="no" allow="autoplay"
+  <iframe width="700" height="350"
+        style="filter: invert(1) hue-rotate(180deg); border: none;"
           src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-808808879&color=%230078D7&auto_play=false&show_user=true&show_reposts=false&show_teaser=true">
   </iframe>
+
 </div>
 
     <div id="popup-video" class="popup">
@@ -221,8 +236,33 @@
         </ul>
     </div>
 
+<!-- ▸ Top-RIGHT Spotify player -->
+<div id="popup-spotify"
+     class="popup"
+     style="top:20px; right:20px; bottom:1000; width:320px;">
+  <div class="popup-header">
+    <span class="popup-title">Spotify</span>
+    <button class="close-button" onclick="closePopup('popup-spotify')">X</button>
+  </div>
+
+  <iframe width="300" height="80"
+          src="https://open.spotify.com/embed/playlist/2JreqojSoG5pwc9D7RFa8b"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
+  </iframe>
+</div>
+
  <!-- ░░  SCRIPTS ░░ -->
 <script>
+function closePopup(id){
+  document.getElementById(id).classList.add('hidden');
+}
+    /* ▸ splash auto-dismiss */
+window.addEventListener('load', () => {
+  const splash = document.getElementById('boot-splash');
+  setTimeout(()=> splash.classList.add('done'), 700);
+});
+
   /* ▸ Start-menu toggle */
   document.querySelector('.start-menu-icon').addEventListener('click', () => {
     document.querySelector('.start-menu').classList.toggle('hidden');
@@ -245,6 +285,10 @@
   function closePopup () {
     document.getElementById('popup-video').classList.add('hidden');
   }
+function closePopup(id){
+  document.getElementById(id).classList.add('hidden');
+}
+
 </script>
 
     </script>
