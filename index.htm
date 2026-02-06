@@ -25,7 +25,7 @@
     
     <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="index_style.css?v=2">
     
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/vLVqhKW/frame0019.png">
@@ -98,7 +98,7 @@
     <div class="taskbar">
         <div class="taskbar-items">
             <div class="start-menu-icon">
-                <img src="https://whatthelogo.com/storage/logos/windows-start-button-272836.png" alt="Start Menu">
+                <img src="assets/start-menu.png" alt="Start Menu">
             </div>
             <a href="https://kris102.github.io/site/portfolio.html" target="_blank" class="taskbar-icon">
                 <img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png" alt="Portfolio">
@@ -202,10 +202,12 @@
     <span class="popup-title">SoundCloud</span>
     <button class="close-button" onclick="closePopup('popup-sc-center')">X</button>
   </div>
-  <iframe width="700" height="350"
-        style="filter: invert(1) hue-rotate(180deg); border: none;"
-          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-808808879&color=%230078D7&auto_play=false&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
+  <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2187019241&color=%238ca09c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+  <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+    <a href="https://soundcloud.com/user-808808879" title="Toshin" target="_blank" style="color: #cccccc; text-decoration: none;">Toshin</a> ·
+    <a href="https://soundcloud.com/user-808808879/sets/cloud" title="CLOUD" target="_blank" style="color: #cccccc; text-decoration: none;">CLOUD</a>
+  </div>
 
 </div>
 
@@ -228,7 +230,7 @@
         <!-- Your links formatted as desktop icons here -->
     </div>
 
-<div class="start-menu hidden">
+<div class="start-menu">
   <div class="start-menu-bar">KrisOS Millinium Edition</div>
   <ul>
     <li><a href="portfolio.html"><img src="https://res.cloudinary.com/dw1jjbbe3/image/upload/v1713184775/gsi358jzbdg1xbxx8ixe.png">Graphic Design</a></li>
@@ -243,26 +245,14 @@
   </ul>
 </div>
 
-<!-- ▸ Top-RIGHT Spotify player -->
-<div id="popup-spotify"
-     class="popup"
-     style="top:20px; right:20px; bottom:1000; width:320px;">
-  <div class="popup-header">
-    <span class="popup-title">Spotify</span>
-    <button class="close-button" onclick="closePopup('popup-spotify')">X</button>
-  </div>
-
-  <iframe width="300" height="80"
-          src="https://open.spotify.com/embed/playlist/2JreqojSoG5pwc9D7RFa8b"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture">
-  </iframe>
-</div>
-
  <!-- ░░  SCRIPTS ░░ -->
 <script>
 function closePopup(id){
-  document.getElementById(id).classList.add('hidden');
+  const targetId = id || 'popup-video';
+  const el = document.getElementById(targetId);
+  if (el) {
+    el.classList.add('hidden');
+  }
 }
     /* ▸ splash auto-dismiss */
 window.addEventListener('load', () => {
@@ -270,9 +260,14 @@ window.addEventListener('load', () => {
   setTimeout(()=> splash.classList.add('done'), 700);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const startMenu = document.querySelector('.start-menu');
+  const startIcon = document.querySelector('.start-menu-icon');
+  if (!startMenu || !startIcon) return;
+
   /* ▸ Start-menu toggle */
-  document.querySelector('.start-menu-icon').addEventListener('click', () => {
-    document.querySelector('.start-menu').classList.toggle('hidden');
+  startIcon.addEventListener('click', () => {
+    startMenu.classList.toggle('open');
   });
 
   /* ▸ Clock */
@@ -288,19 +283,64 @@ window.addEventListener('load', () => {
   setInterval(updateClock, 1000);
   updateClock();
 
-  /* ▸ Close the video pop-up */
-  function closePopup () {
-    document.getElementById('popup-video').classList.add('hidden');
-  }
-function closePopup(id){
-  document.getElementById(id).classList.add('hidden');
-}
-document.addEventListener('click', function(event) {
-  const startMenu = document.querySelector('.start-menu');
-  const startIcon = document.querySelector('.start-menu-icon');
-  if (!startMenu.contains(event.target) && !startIcon.contains(event.target)) {
-    startMenu.classList.add('hidden');
-  }
+  document.addEventListener('click', function(event) {
+    if (!startMenu.contains(event.target) && !startIcon.contains(event.target)) {
+      startMenu.classList.remove('open');
+    }
+  });
+});
+
+/* ▸ Draggable popups (SoundCloud + videos) */
+document.addEventListener('DOMContentLoaded', () => {
+  const taskbar = document.querySelector('.taskbar');
+  const taskbarHeight = taskbar ? taskbar.getBoundingClientRect().height : 40;
+
+  document.querySelectorAll('.popup').forEach((popup) => {
+    const header = popup.querySelector('.popup-header');
+    if (!header) return;
+
+    const rect = popup.getBoundingClientRect();
+    popup.style.position = 'fixed';
+    popup.style.left = rect.left + 'px';
+    popup.style.top = rect.top + 'px';
+    popup.style.right = 'auto';
+    popup.style.bottom = 'auto';
+    popup.style.transform = 'none';
+
+    header.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const rect = popup.getBoundingClientRect();
+      const offsetX = startX - rect.left;
+      const offsetY = startY - rect.top;
+
+      function onMove(ev) {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const liveRect = popup.getBoundingClientRect();
+        const maxX = vw - liveRect.width;
+        const maxY = vh - taskbarHeight - liveRect.height;
+
+        let nextLeft = ev.clientX - offsetX;
+        let nextTop = ev.clientY - offsetY;
+
+        nextLeft = Math.max(0, Math.min(nextLeft, maxX));
+        nextTop = Math.max(0, Math.min(nextTop, maxY));
+
+        popup.style.left = `${nextLeft}px`;
+        popup.style.top = `${nextTop}px`;
+      }
+
+      function onUp() {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  });
 });
 </script>
 
